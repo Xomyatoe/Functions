@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Arrays", "Arrays\Arrays.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Home work 18.03.24", "Home work 18.03.24\Home work 18.03.24.vcxproj", "{3D899F82-94BD-4FEE-9D01-34520019EA3B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FunctionOverLoading", "FunctionOverLoading\FunctionOverLoading.vcxproj", "{7331016B-EBD7-46D2-B575-DBBF21C93979}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{3D899F82-94BD-4FEE-9D01-34520019EA3B}.Release|x64.Build.0 = Release|x64
 		{3D899F82-94BD-4FEE-9D01-34520019EA3B}.Release|x86.ActiveCfg = Release|Win32
 		{3D899F82-94BD-4FEE-9D01-34520019EA3B}.Release|x86.Build.0 = Release|Win32
+		{7331016B-EBD7-46D2-B575-DBBF21C93979}.Debug|x64.ActiveCfg = Debug|x64
+		{7331016B-EBD7-46D2-B575-DBBF21C93979}.Debug|x64.Build.0 = Debug|x64
+		{7331016B-EBD7-46D2-B575-DBBF21C93979}.Debug|x86.ActiveCfg = Debug|Win32
+		{7331016B-EBD7-46D2-B575-DBBF21C93979}.Debug|x86.Build.0 = Debug|Win32
+		{7331016B-EBD7-46D2-B575-DBBF21C93979}.Release|x64.ActiveCfg = Release|x64
+		{7331016B-EBD7-46D2-B575-DBBF21C93979}.Release|x64.Build.0 = Release|x64
+		{7331016B-EBD7-46D2-B575-DBBF21C93979}.Release|x86.ActiveCfg = Release|Win32
+		{7331016B-EBD7-46D2-B575-DBBF21C93979}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
