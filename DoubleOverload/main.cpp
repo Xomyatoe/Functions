@@ -25,7 +25,7 @@ double Avg(const double arr[], const int n);
 int minValueIn(const int arr[], const int n);
 int maxValueIn(const int arr[], const int n);
 
-int ShiftLeft(const int arr[], const int n);
+void ShiftLeft(const int arr[], const int n, int number_of_shifts);
 
 void main()
 {
@@ -38,7 +38,11 @@ void main()
 	cout << "Среднее арифметическое массива: " << Avg(i_arr, I_SIZE) << endl;
 	cout << "Минимальное значение в массиве: " << minValueIn(i_arr, I_SIZE) << endl;
 	cout << "Максимальное значение в массиве: " << maxValueIn(i_arr, I_SIZE) << endl;
-
+	
+	int number_of_shifts;
+	cout << " На сколько элементов сдвинуть массив: "; cin >> number_of_shifts;
+	ShiftLeft(arr[], I_SIZE, number_of_shifts);
+	Print(i_arr, I_SIZE);
 	cout << delimeter << endl;
 
 	const int D_SIZE = 8;
@@ -194,4 +198,24 @@ int maxValueIn(const int arr[], const int n)
 		if (arr[i] > max) max = arr[i];
 	}
 	return max;
+}
+void ShiftLeft(const int arr[], const int n, int number_of_shifts)
+{
+	
+	for (int i = 0; i < number_of_shifts; i++)
+	{
+		int buffer = arr[0];
+		for (int j = 0; j < n - 1; j++)
+		{
+
+			i_arr[j] = arr[j + 1];
+		}
+		i_arr[n - 1] = buffer;
+		
+		
+	}
+	for (int i = 0; i < n; i++)
+	{
+		cout << arr[i] << endl;
+	}
 }
