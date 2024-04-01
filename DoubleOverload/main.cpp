@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 #define tab "\t"
 #define delimeter "\n------------------------------------------\n"
@@ -34,13 +34,13 @@ void main()
 	int i_arr[I_SIZE];
 	FillRand(i_arr, I_SIZE);
 	Print(i_arr, I_SIZE);
-	cout << "Ñóììà ýëåìåíòîâ ìàññèâà: " << Sum(i_arr, I_SIZE) << endl;
-	cout << "Ñðåäíåå àðèôìåòè÷åñêîå ìàññèâà: " << Avg(i_arr, I_SIZE) << endl;
-	cout << "Ìèíèìàëüíîå çíà÷åíèå â ìàññèâå: " << minValueIn(i_arr, I_SIZE) << endl;
-	cout << "Ìàêñèìàëüíîå çíà÷åíèå â ìàññèâå: " << maxValueIn(i_arr, I_SIZE) << endl;
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << Sum(i_arr, I_SIZE) << endl;
+	cout << "Ð¡Ñ€ÐµÐ´Ð½ÐµÐµ Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << Avg(i_arr, I_SIZE) << endl;
+	cout << "ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ: " << minValueIn(i_arr, I_SIZE) << endl;
+	cout << "ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ: " << maxValueIn(i_arr, I_SIZE) << endl;
 	
 	int number_of_shifts;
-	cout << " Íà ñêîëüêî ýëåìåíòîâ ñäâèíóòü ìàññèâ: "; cin >> number_of_shifts;
+	cout << " ÐÐ° ÑÐºÐ¾Ð»ÑŒÐºÐ¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² ÑÐ´Ð²Ð¸Ð½ÑƒÑ‚ÑŒ Ð¼Ð°ÑÑÐ¸Ð²: "; cin >> number_of_shifts;
 	ShiftLeft(arr[], I_SIZE, number_of_shifts);
 	Print(i_arr, I_SIZE);
 	cout << delimeter << endl;
@@ -52,12 +52,12 @@ void main()
 
 	cout << delimeter << endl;
 
-	const int ROWS = 3;//êîëâî ñòðîê
-	const int COLS = 4;//êîëâî ýë. ñòðîêè
+	const int ROWS = 3;//ÐºÐ¾Ð»Ð²Ð¾ ÑÑ‚Ñ€Ð¾Ðº
+	const int COLS = 4;//ÐºÐ¾Ð»Ð²Ð¾ ÑÐ». ÑÑ‚Ñ€Ð¾ÐºÐ¸
 	int i_arr_2[ROWS][COLS];
-	//çàïîëíåíèå äâóìåðíîãî ìàññèâà ñëó÷àéíûìè ÷èñëàìè
+	//Ð·Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ðµ Ð´Ð²ÑƒÐ¼ÐµÑ€Ð½Ð¾Ð³Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð° ÑÐ»ÑƒÑ‡Ð°Ð¹Ð½Ñ‹Ð¼Ð¸ Ñ‡Ð¸ÑÐ»Ð°Ð¼Ð¸
 	FillRand(i_arr_2, ROWS, COLS);
-	//âûâîä äâóìåðíîãî ìàññèâà
+	//Ð²Ñ‹Ð²Ð¾Ð´ Ð´Ð²ÑƒÐ¼ÐµÑ€Ð½Ð¾Ð³Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð°
 	/*for (int i = 0; i < ROWS; i++)
 	{
 		for (int j = 0; j < COLS; j++)
@@ -108,7 +108,7 @@ void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS, int minRand ,
 			arr[i][j] = rand() % 100;
 		}
 	}
-	//âûâîä äâóìåðíîãî ìàññèâà
+	//Ð²Ñ‹Ð²Ð¾Ð´ Ð´Ð²ÑƒÐ¼ÐµÑ€Ð½Ð¾Ð³Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð°
 }
 
 void Print(const int arr[], const int n)

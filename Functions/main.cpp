@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 int Sum(int a, int b, int c = 0);
@@ -14,7 +14,7 @@ void main()
 {
 	setlocale(LC_ALL, "");
 	int a, b;
-	cout << "Ââåäèòå äâà ÷èñëà: "; cin >> a >> b;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð²Ð° Ñ‡Ð¸ÑÐ»Ð°: "; cin >> a >> b;
 	int c = Sum(a, b);
 	cout << a << "+" << b << "=" << c << endl;
 	cout << a << "-" << b << "=" << Diff(a, b) << endl;
@@ -23,15 +23,15 @@ void main()
 #ifdef POWER
 	int a;
 	int n;
-	cout << "Ââåäèòå îñíîâàíèå ñòåïåíè: "; cin >> a;
-	cout << "Ââåäèòå ïîêàçàòåëü ñòåïåíè: "; cin >> n;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾ÑÐ½Ð¾Ð²Ð°Ð½Ð¸Ðµ ÑÑ‚ÐµÐ¿ÐµÐ½Ð¸: "; cin >> a;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ð¾ÐºÐ°Ð·Ð°Ñ‚ÐµÐ»ÑŒ ÑÑ‚ÐµÐ¿ÐµÐ½Ð¸: "; cin >> n;
 	cout << a << " ^ " << n << " = " << Power(a, n) << endl;
 #endif // POWER
 
 #ifdef FACTORIAL
 
 	int n; 
-	cout << "Ââåäèòå ÷èñëî: "; cin >> n;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾: "; cin >> n;
 	cout << Factorial(n) << endl;
 #endif // FACTORIAL
 

@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 #define tab "\t"
 void FillRand(int arr[], const int n, int minRand=0, int maxRand=100);
@@ -13,15 +13,15 @@ void main()
 	/*int minRand, maxRand;
 	do
 	{
-		cout << "Ââåäèòå ìèíèìàëüíî âîçìîæíîå ñëó÷àéíîå ÷èñëî: "; cin >> minRand;
-		cout << "Ââåäèòå ìàêñèìàëüíð âîçìîæíîå ñëó÷àéíîå ÷èñëî: "; cin >> maxRand;
-		if (minRand == maxRand) cout << "Ïðåäåëû äèàïàçîíà íå äîëæíû ñîâïàäàòü" << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼Ð¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾Ðµ ÑÐ»ÑƒÑ‡Ð°Ð¹Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: "; cin >> minRand;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ñ€ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾Ðµ ÑÐ»ÑƒÑ‡Ð°Ð¹Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: "; cin >> maxRand;
+		if (minRand == maxRand) cout << "ÐŸÑ€ÐµÐ´ÐµÐ»Ñ‹ Ð´Ð¸Ð°Ð¿Ð°Ð·Ð¾Ð½Ð° Ð½Ðµ Ð´Ð¾Ð»Ð¶Ð½Ñ‹ ÑÐ¾Ð²Ð¿Ð°Ð´Ð°Ñ‚ÑŒ" << endl;
 
 	} while (minRand == maxRand);*/
 	FillRand(arr, n);
 	Print(arr, n);
-	cout << "Ñóììà ýëåìåíòîâ ìàññèâà: " << Sum(arr, n) << endl;
-	cout << "Ñðåäíåå àðèôìåòè÷åñêîå ìàññèâà: " << Avg(arr, n) << endl;
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << Sum(arr, n) << endl;
+	cout << "Ð¡Ñ€ÐµÐ´Ð½ÐµÐµ Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << Avg(arr, n) << endl;
 }
 	void FillRand(int arr[], const int n, int minRand, int maxRand)
 	{

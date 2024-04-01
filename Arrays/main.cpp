@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 #define tab "\t"
@@ -11,9 +11,9 @@ void main()
 	int minRand, maxRand;
 	do
 	{
-		cout << "Ââåäèòå ìèíèìàëüíî âîçìîæíîå ñëó÷àéíîå ÷èñëî: "; cin >> minRand;
-		cout << "Ââåäèòå ìàêñèìàëüíð âîçìîæíîå ñëó÷àéíîå ÷èñëî: "; cin >> maxRand;
-		if (minRand == maxRand) cout << "Ïðåäåëû äèàïàçîíà íå äîëæíû ñîâïàäàòü" << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼Ð¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾Ðµ ÑÐ»ÑƒÑ‡Ð°Ð¹Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: "; cin >> minRand;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ñ€ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾Ðµ ÑÐ»ÑƒÑ‡Ð°Ð¹Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: "; cin >> maxRand;
+		if (minRand == maxRand) cout << "ÐŸÑ€ÐµÐ´ÐµÐ»Ñ‹ Ð´Ð¸Ð°Ð¿Ð°Ð·Ð¾Ð½Ð° Ð½Ðµ Ð´Ð¾Ð»Ð¶Ð½Ñ‹ ÑÐ¾Ð²Ð¿Ð°Ð´Ð°Ñ‚ÑŒ" << endl;
 
 	} while (minRand == maxRand);
 	if (maxRand <= minRand)
