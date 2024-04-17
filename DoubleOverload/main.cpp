@@ -34,12 +34,14 @@ void ShiftRight(int arr[], const int n, const int number_of_shifts);
 
 void Sort(int arr[], const int n);
 void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS);
+
+void Unique(int arr[], const int n);
 void main()
 {
 	setlocale(LC_ALL, "");
-	const int I_SIZE = 5;
+	const int I_SIZE = 8;
 	int i_arr[I_SIZE];
-	FillRand(i_arr, I_SIZE);
+	Unique(i_arr, I_SIZE);
 	Print(i_arr, I_SIZE);
 	cout << "Сумма элементов массива: " << Sum(i_arr, I_SIZE) << endl;
 	cout << "Среднее арифметическое массива: " << Avg(i_arr, I_SIZE) << endl;
@@ -82,6 +84,8 @@ void main()
 	cout << "Сумма элементов массива: " << Sum(i_arr_2, ROWS, COLS) << endl;
 	Sort(i_arr_2, ROWS, COLS);
 	Print(i_arr_2, ROWS, COLS);
+
+	cout << delimeter << endl;
 }
 void FillRand(int arr[], const int n, int minRand, int maxRand)
 {
@@ -314,4 +318,27 @@ void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS)
 	}
 	cout << "Массив отсортирован за " << iterations << " итераций.\n";
 	cout << "При этом было выполнено " << exchanges << " обменов элементов. \n";
+}
+
+void Unique(int arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		bool unique;
+		do
+	   {
+		   arr[i] = rand() % n;
+		   unique = true;
+		
+		   for (int j = 0; j < i; j++)
+		   {
+			 if (arr[i] == arr[j])
+			    {
+				   unique = false;
+				   break;
+			    }
+		   }
+	   } while (!unique);
+
+	}
 }
