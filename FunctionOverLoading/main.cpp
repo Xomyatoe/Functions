@@ -17,8 +17,6 @@ double Avg(const double arr[], const int n);
 int minValueIn(const int arr[], const int n);
 int maxValueIn(const int arr[], const int n);
 
-int ShiftLeft(const int arr[], const int n);
-
 void main()
 {
 	setlocale(LC_ALL, "");
