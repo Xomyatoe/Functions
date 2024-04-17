@@ -10,7 +10,6 @@ void FillRand(int arr[], const int n, int minRand = 0, int maxRand = 100);
 void FillRand(double arr[], const int n, int minRand = 0, int maxRand = 100);
 void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand = 100);
 
-
 void Print(const int arr[], const int n);
 void Print(const double arr[], const int n);
 void Print(const int arr[ROWS][COLS], const int ROWS, const int COLS);
