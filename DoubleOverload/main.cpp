@@ -64,8 +64,8 @@ void main()
 	const int ROWS = 3;//колво строк
 	const int COLS = 4;//колво эл. строки
 	int i_arr_2[ROWS][COLS];
-	//заполнение двумерного массива случайными числами
 	FillRand(i_arr_2, ROWS, COLS);
+	//заполнение двумерного массива случайными числами
 	//вывод двумерного массива
 	/*for (int i = 0; i < ROWS; i++)
 	{
@@ -277,22 +277,41 @@ void Sort(int arr[], const int n)
 }
 void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS)
 {
+	int iterations = 0;
+	int exchanges = 0;
 	for (int i = 0; i < ROWS; i++)
 	{
 		for (int j = 0; j < COLS; j++)
 		{
-			for (int k = 0; k < ROWS; k++)
+			/*for (int k = j + 1; k < COLS; k++)
 			{
-				for (int l = 0; l < COLS; l++)
+				iterations++;
+				if (arr[i][k] < arr[i][j])
 				{
+					int buffer = arr[i][j];
+					arr[i][j] = arr[i][k];
+					arr[i][k] = buffer;
+					exchanges++;
+				}
+			}*/
+			for (int k = i;k <ROWS; k++)
+			{
+				for (int l = k == i ? j + 1 : 0; l < COLS; l++)
+				{
+					//if (k == i && l==0)l = j + 1;
+					//if (l == COLS)break;
+					iterations++;
 					if (arr[i][j] > arr[k][l])
 					{
 						int buffer = arr[i][j];
 						arr[i][j] = arr[k][l];
 						arr[k][l] = buffer;
+						exchanges++;
 					}
 				}
 			}
 		}
 	}
+	cout << "Массив отсортирован за " << iterations << " итераций.\n";
+	cout << "При этом было выполнено " << exchanges << " обменов элементов. \n";
 }
