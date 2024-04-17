@@ -36,6 +36,7 @@ void Sort(int arr[], const int n);
 void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS);
 
 void Unique(int arr[], const int n);
+void Unique(int arr[ROWS][COLS], const int ROWS, const int COLS);
 void main()
 {
 	setlocale(LC_ALL, "");
@@ -66,7 +67,8 @@ void main()
 	const int ROWS = 3;//колво строк
 	const int COLS = 4;//колво эл. строки
 	int i_arr_2[ROWS][COLS];
-	FillRand(i_arr_2, ROWS, COLS);
+	Unique(i_arr_2, ROWS, COLS);
+	//FillRand(i_arr_2, ROWS, COLS);
 	//заполнение двумерного массива случайными числами
 	//вывод двумерного массива
 	/*for (int i = 0; i < ROWS; i++)
@@ -340,5 +342,32 @@ void Unique(int arr[], const int n)
 		   }
 	   } while (!unique);
 
+	}
+}
+void Unique(int arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			bool unique;
+			do 
+			{
+				arr[i][j] = rand() % (ROWS * COLS);
+				unique = true;
+				for (int k = 0; k <= i; k++)
+				{
+					for (int l = 0; l < (k == i ? j : COLS); l++)
+					{
+						if (arr[i][j] == arr[k][l])
+						{
+							unique = false;
+							break;
+						}
+					}
+					if (!unique)break;
+				}
+			} while (!unique);
+		}
 	}
 }
