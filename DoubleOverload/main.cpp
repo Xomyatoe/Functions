@@ -24,15 +24,16 @@ double Avg(const double arr[], const int n);
 double Avg(const int arr[ROWS][COLS], const int ROWS, const int COLS);
 
 int minValueIn(const int arr[], const int n);
-int minValueIn(const int arr[ROWS][COLS], const int ROWS,const int COLS);
+int minValueIn(const int arr[ROWS][COLS], const int ROWS, const int COLS);
 
 int maxValueIn(const int arr[], const int n);
 int maxValueIn(const int arr[ROWS][COLS], const int ROWS, const int COLS);
 
 void ShiftLeft(int arr[], const int n, int number_of_shifts);
 void ShiftRight(int arr[], const int n, const int number_of_shifts);
- 
+
 void Sort(int arr[], const int n);
+void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS);
 void main()
 {
 	setlocale(LC_ALL, "");
@@ -47,9 +48,11 @@ void main()
 	Sort(i_arr, I_SIZE);
 	Print(i_arr, I_SIZE);
 	int number_of_shifts;
-	cout << " На сколько элементов сдвинуть массив: "; cin >> number_of_shifts;
-	ShiftLeft(i_arr, I_SIZE, number_of_shifts);
-	Print(i_arr, I_SIZE);
+	//cout << " На сколько элементов сдвинуть массив: "; cin >> number_of_shifts;
+	//ShiftLeft(i_arr, I_SIZE, number_of_shifts);
+	//Print(i_arr, I_SIZE);
+
+
 	cout << delimeter << endl;
 
 	const int D_SIZE = 8;
@@ -74,9 +77,11 @@ void main()
 		cout << endl;
 	}*/
 	Print(i_arr_2, ROWS, COLS);
-	cout << " Максимальное значение в массиве: " <<  maxValueIn(i_arr_2, ROWS, COLS) << endl;
-	cout << " Минимальное значение в массиве: " <<  minValueIn(i_arr_2, ROWS, COLS) << endl;
+	cout << " Максимальное значение в массиве: " << maxValueIn(i_arr_2, ROWS, COLS) << endl;
+	cout << " Минимальное значение в массиве: " << minValueIn(i_arr_2, ROWS, COLS) << endl;
 	cout << "Сумма элементов массива: " << Sum(i_arr_2, ROWS, COLS) << endl;
+	Sort(i_arr_2, ROWS, COLS);
+	Print(i_arr_2, ROWS, COLS);
 }
 void FillRand(int arr[], const int n, int minRand, int maxRand)
 {
@@ -108,7 +113,7 @@ void FillRand(double arr[], const int n, int minRand, int maxRand)
 	}
 }
 
-void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS, int minRand , int maxRand)
+void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS, int minRand, int maxRand)
 {
 	for (int i = 0; i < ROWS; i++)
 	{
@@ -243,14 +248,14 @@ int maxValueIn(const int arr[ROWS][COLS], const int ROWS, const int COLS)
 
 void ShiftLeft(int arr[], const int n, int number_of_shifts)
 {
-	
+
 	for (int i = 0; i < number_of_shifts; i++)
 	{
 		int buffer = arr[0];
 		for (int i = 0; i < n; i++)
 		{
 
-			arr[i-1] = arr[i];
+			arr[i - 1] = arr[i];
 		}
 		arr[n - 1] = buffer;
 	}
@@ -266,6 +271,27 @@ void Sort(int arr[], const int n)
 				int buffer = arr[i];
 				arr[i] = arr[j];
 				arr[j] = buffer;
+			}
+		}
+	}
+}
+void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			for (int k = 0; k < ROWS; k++)
+			{
+				for (int l = 0; l < COLS; l++)
+				{
+					if (arr[i][j] > arr[k][l])
+					{
+						int buffer = arr[i][j];
+						arr[i][j] = arr[k][l];
+						arr[k][l] = buffer;
+					}
+				}
 			}
 		}
 	}
